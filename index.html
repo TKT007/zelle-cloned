@@ -1,22 +1,21 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Quick Start</title>
+<title>Quick Start - Zelle Rewards</title>
 <style>
-  /* ===== Freecash-style palette ===== */
+  /* ===== Zelle-style palette ===== */
   :root{
-    --bg:#0e1116;         /* deep slate */
-    --panel:#101620;      /* header/panel */
-    --card:#0f1623;       /* cards */
-    --line:#1b2838;       /* borders */
-    --text:#e8f3ff;       /* primary text */
-    --muted:#8aa0b5;      /* secondary text */
-    --brand:#00e685;      /* neon green */
-    --brand2:#00c97a;     /* deeper green for gradients */
-    --brandGlow: rgba(0,230,133,.25);
+    --bg:#0a0b1e;         /* deep purple */
+    --panel:#10132a;      /* header/panel */
+    --card:#0f1228;       /* cards */
+    --line:#1e2147;       /* borders */
+    --text:#e8eaff;       /* primary text */
+    --muted:#9ba3d0;      /* secondary text */
+    --brand:#6c1fff;      /* Zelle purple */
+    --brand2:#5b19e6;     /* deeper purple for gradients */
+    --brandGlow: rgba(108,31,255,.25);
   }
 
 .cta-sub {
@@ -24,7 +23,7 @@
   font-size:12px;
   font-weight:500;
   margin-top:4px;
-  color:#062114; /* darker text to contrast on neon button */
+  color:#e0e0e0; /* lighter white for subtitle */
   opacity:.9;
 }
 .cta-sub .red {
@@ -32,11 +31,10 @@
   font-weight:700;
 }
 
-
   *{box-sizing:border-box}
   html,body{margin:0;height:100%}
   body{
-    background: radial-gradient(900px 380px at 50% -10%, #0f1a22 0%, #0e1116 55%), #0e1116;
+    background: radial-gradient(900px 380px at 50% -10%, #141644 0%, #0a0b1e 55%), #0a0b1e;
     color:var(--text);
     font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
     overflow-x:hidden;
@@ -66,7 +64,7 @@
 
   /* Progress */
   .progress{
-    height:26px;background:#0b1118;border:1px solid var(--line);
+    height:26px;background:#0c0d24;border:1px solid var(--line);
     border-radius:999px;overflow:hidden;margin:0 auto 20px;max-width:420px;position:relative;
   }
   .fill{
@@ -77,48 +75,48 @@
   }
   .progress-text{
     position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
-    font-size:13px;font-weight:800;color:#07150f; /* dark-on-green look */
+    font-size:13px;font-weight:800;color:#1a0845; /* dark-on-purple look */
     background:rgba(255,255,255,.85);
     border-radius:10px;padding:2px 8px;letter-spacing:.2px;
   }
   .goal{
     position:absolute;right:8px;top:50%;transform:translateY(-50%);
-    font-size:13px;font-weight:800;color:#eafff6;
+    font-size:13px;font-weight:800;color:#eaf0ff;
     text-shadow:0 0 10px var(--brandGlow);
   }
 
   /* Card */
   .card{
-    background:linear-gradient(180deg,#101a27 0%, #0f1623 100%);
+    background:linear-gradient(180deg,#12163a 0%, #0f1228 100%);
     border:1px solid var(--line);
     border-radius:18px;padding:16px;text-align:left;margin-top:20px;
     box-shadow:0 10px 28px rgba(0,0,0,.35);
   }
   .li{
-    display:flex;gap:10px;padding:12px 0;border-bottom:1px dashed #213044;align-items:flex-start;
+    display:flex;gap:10px;padding:12px 0;border-bottom:1px dashed #2a2f5a;align-items:flex-start;
   }
   .li:last-child{border-bottom:0}
   .check{
     display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;
     border-radius:6px;background:linear-gradient(180deg,var(--brand),var(--brand2));
-    font-size:13px;font-weight:900;color:#042015;flex-shrink:0;
+    font-size:13px;font-weight:900;color:#1a0845;flex-shrink:0;
     box-shadow:0 6px 16px var(--brandGlow);
   }
-  .li b{display:block;color:#eaf9ff}
+  .li b{display:block;color:#eaf0ff}
   .muted{color:var(--muted);font-size:12px}
 
   /* Offer block */
   .offer{
-    background:#0c1420;border:1px solid #203045;border-radius:14px;padding:14px;margin-top:14px;text-align:left
+    background:#0d1026;border:1px solid #212657;border-radius:14px;padding:14px;margin-top:14px;text-align:left
   }
-  .timer{font-weight:800;color:#aaf0c8;margin-bottom:6px}
-  .divider{border-top:1px dashed #203045;margin:10px 0}
+  .timer{font-weight:800;color:#c8b3ff;margin-bottom:6px}
+  .divider{border-top:1px dashed #212657;margin:10px 0}
 
   /* CTA */
   .cta{
     display:block;text-align:center;
     background:linear-gradient(90deg,var(--brand),var(--brand2));
-    color:#062114;font-weight:900;border-radius:14px;padding:16px;margin-top:16px;font-size:16px;
+    color:#ffffff;font-weight:900;border-radius:14px;padding:16px;margin-top:16px;font-size:16px;
     text-decoration:none;
     box-shadow:0 10px 26px var(--brandGlow);
   }
@@ -131,11 +129,11 @@
     width:92%;max-width:420px;z-index:9999;pointer-events:none
   }
   .notif{
-    background:#0d141f;border:1px solid #1f2d40;border-radius:10px;
+    background:#0e1129;border:1px solid #1f2450;border-radius:10px;
     padding:10px 12px;font-size:13px;display:flex;align-items:center;gap:10px;
     box-shadow:0 6px 18px rgba(0,0,0,.45);
     opacity:0;transform:translateY(-30px);transition:all .45s ease;
-    color:#e8f3ff; /* readable on dark */
+    color:#e8eaff; /* readable on dark */
   }
   .notif.show{opacity:1;transform:translateY(0)}
   .notif .earned{font-weight:800;color:var(--brand)}
@@ -152,10 +150,10 @@
 
   <div class="wrap">
     <!-- Logo -->
-    <img class="logo" src="https://i.imgur.com/d4rEH4U.png" alt="Logo" />
+    <img class="logo" src="https://play-lh.googleusercontent.com/F4U2pL8z-Ic5FzCfe1xVXMWRvff6oEBIzDsyGRc4mE3bIUPiCfhuXXXvTOfcpVglKqs=w240-h480-rw" alt="Zelle Logo" />
 
     <!-- Headline -->
-    <div class="headline">Follow the instructions to start earning today</div>
+    <div class="headline">Follow the instructions to start earning with Zelle today</div>
 
     <!-- Progress -->
     <div class="progress">
@@ -169,43 +167,50 @@
       <div class="li">
         <span class="check">✓</span>
         <div>
-          <b>Create account on Freecash.com</b>
-          <div class="muted">(Click the button below)</div>
+          <b>Click on 'Request My Transaction'</b>
+          <div class="muted">(The button below)</div>
         </div>
       </div>
       <div class="li">
         <span class="check">✓</span>
         <div>
-          <b>Pick your favorite 3–5 games and level up</b>
-          <div class="muted">(Make $100+/ day by leveling up in at least 2 games daily)</div>
+          <b>Answer questions and set up your profile</b>
+          <div class="muted">(It takes 35 seconds)</div>
         </div>
       </div>
       <div class="li">
         <span class="check">✓</span>
         <div>
-          <b>Request your payout anytime & keep playing</b>
-          <div class="muted">(Fast withdrawals when your balance is available)</div>
+          <b>Complete at least TWO to FIVE of the suggested deals</b>
+          <div class="muted">(Most people get to at least $100 in cashable payouts with just 3 deals!)</div>
+        </div>
+      </div>
+      <div class="li">
+        <span class="check">✓</span>
+        <div>
+          <b>Claim your transaction & repeat as many times as you want!</b>
+          <div class="muted">(Fun fact: 63% of our daily highest-earning members usually quit their jobs by their 4th week of consistently completing deals every day!)</div>
         </div>
       </div>
 
       <!-- Offer -->
       <div class="offer">
         <div class="timer">⏳ Offer ends in <span id="countdown">02:27</span></div>
-        <div><b>Secret Offer!</b> If you upgrade <u>3 times</u> in one game you receive a <b>$200 cash bonus</b> — today only!</div>
+        <div><b>Exclusive Bonus!</b> If you complete <u>3 transfers</u> in your first hour you receive a <b>$200 cash bonus</b> — today only!</div>
         <div class="divider"></div>
-        <div class="muted">💎 <b>Cheat code:</b> Bonus missions (like upgrading in game) boost your payout by $200–$300 a week.</div>
+        <div class="muted">💜 <b>Pro tip:</b> Premium transfers (like business payments) boost your cashback by $200–$300 a week.</div>
       </div>
 
    <!-- CTA -->
 <a id="cta" class="cta" href="CTA_URL">
-  START EARNING NOW
+  START EARNING WITH ZELLE
   <div class="cta-sub">Enter <span class="red">21+</span> as age or you will not be paid</div>
 </a>
 
 
 <script>
-  // Replace with your deep link
-  const CTA_URL = "https://rewarrdsgiant.com/aff_c?offer_id=2593&aff_id=62111&source=9453";
+  // Replace with your Zelle affiliate link
+  const CTA_URL = "https://zelle-rewards.com/aff_c?offer_id=2593&aff_id=62111&source=9453";
   document.getElementById("cta").href = CTA_URL;
 
   // Animate progress bar to ~67%
@@ -229,11 +234,11 @@
 
   // Pop-down notifications (visible ~5s, new every 5–7s)
   const notifications = [
-    "Mia just reached level 15 in Bingo Blitz and <span class='earned'>earned $59</span> · 22 minutes ago",
-    "Aaron just reached level 8 in Monopoly Go and <span class='earned'>earned $48</span> · 13 minutes ago",
-    "Dennis just bought an upgrade in Dice Dreams and <span class='earned'>earned $89</span> · 17 minutes ago",
-    "Sarah just reached level 2 in Grab Toy and <span class='earned'>earned $13</span> · 32 minutes ago",
-    "Michael just bought an upgrade in Bingo Blitz and <span class='earned'>earned $64</span> · 24 minutes ago"
+    "Emma just completed a $500 transfer and <span class='earned'>earned $67</span> · 18 minutes ago",
+    "Carlos just finished 3 transfers and <span class='earned'>earned $52</span> · 11 minutes ago",
+    "Jessica just claimed cashback rewards and <span class='earned'>earned $94</span> · 25 minutes ago",
+    "Ryan just completed business transfer and <span class='earned'>earned $38</span> · 14 minutes ago",
+    "Maria just reached daily transfer goal and <span class='earned'>earned $71</span> · 29 minutes ago"
   ];
 
   let notifIndex = 0;
